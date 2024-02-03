@@ -1,7 +1,7 @@
 pipeline{
 
     agent{
-        label "jenkins-agent"
+        label "jenkins-ssh-agent"
     }
 
     tools{
