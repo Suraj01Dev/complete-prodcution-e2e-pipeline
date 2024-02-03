@@ -24,6 +24,19 @@ pipeline{
                 git branch:"master", credentialsId: 'github', url: 'https://github.com/Suraj01Dev/complete-prodcution-e2e-pipeline'
             }
         }
+        stage("Build Application"){
+
+            steps{
+                sh "mvn clean package"
+            }
+        }
+        stage("Test Application"){
+
+            steps{
+                sh "mvn test"
+            }
+        }
+
 
     }
 
